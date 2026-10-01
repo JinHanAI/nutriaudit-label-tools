@@ -2,20 +2,22 @@
 
 Eight small, dependency-free JavaScript tools for reading and organizing supplement labels. Use them offline, import the functions into your own project, or run the static browser demo.
 
+Try the [hosted tools on NutriAudit](https://www.nutriaudit.com/tools/supplement-label-tools?utm_source=github&utm_medium=referral&utm_campaign=label_tools) without downloading the toolkit.
+
 **These tools do arithmetic and label organization. They do not determine whether a supplement combination is safe, recommend doses, diagnose conditions, or check drug interactions.**
 
 ## Eight tasks
 
 | Task | What you get | Module function |
 |---|---|---|
-| Duplicate ingredient names | Names shared across entered products | `findProductOverlaps` |
-| Daily label totals | Sum known amounts using your actual daily units | `summarizeLabels` |
-| Compare two labels | Shared names and comparable daily quantities | `compareLabels` |
-| Per-serving arithmetic | Amount per serving × daily units ÷ units per serving | `calculateDailyAmount` |
-| Mass units | Convert the same substance between g, mg and mcg | `convertMass` |
-| Sourced name lookup | Four explicit groups: calcium, vitamin C, vitamin D2, vitamin D3 | `lookupLabelName` |
-| Label inventory | Local CSV and printable list | `exportInventoryCsv` |
-| Bottle use and cost | Estimated days and daily cost for your entered plan | `calculateBottleCost` |
+| [Duplicate ingredient names](https://www.nutriaudit.com/tools/supplement-label-tools?task=duplicate&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Names shared across entered products | `findProductOverlaps` |
+| [Daily label totals](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-total&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Sum known amounts using your actual daily units | `summarizeLabels` |
+| [Compare two labels](https://www.nutriaudit.com/tools/supplement-label-tools?task=compare&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Shared names and comparable daily quantities | `compareLabels` |
+| [Per-serving arithmetic](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-dose&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Amount per serving × daily units ÷ units per serving | `calculateDailyAmount` |
+| [Mass units](https://www.nutriaudit.com/tools/supplement-label-tools?task=units&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Convert the same substance between g, mg and mcg | `convertMass` |
+| [Sourced name lookup](https://www.nutriaudit.com/tools/supplement-label-tools?task=aliases&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Four explicit groups: calcium, vitamin C, vitamin D2, vitamin D3 | `lookupLabelName` |
+| [Label inventory](https://www.nutriaudit.com/tools/supplement-label-tools?task=inventory&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Local CSV and printable list | `exportInventoryCsv` |
+| [Bottle use and cost](https://www.nutriaudit.com/tools/supplement-label-tools?task=cost&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Estimated days and daily cost for your entered plan | `calculateBottleCost` |
 
 No package installation, API key, account, database, or external asset is required. Original label names remain visible; an unknown amount is not converted into zero. Name overlap is not a clinical interaction or a safety conclusion.
 
