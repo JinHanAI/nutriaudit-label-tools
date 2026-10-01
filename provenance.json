@@ -1,0 +1,36 @@
+{
+  "preparedAt": "2026-10-01T15:41:18.894Z",
+  "status": "isolated_original_code_toolkit",
+  "sources": [
+    {
+      "source": "lib/supplement-label-tools.ts",
+      "output": "label-tools.mjs",
+      "sourceSha256": "de2b881590c858eddf734591eed3b9f3104322780ffb642cb34b7e55abc7d16e",
+      "compiledSha256": "9a428daccf6eb57e07506d3aecb98c5fd8a704db0ce18aab9bc52e04648da663"
+    },
+    {
+      "source": "lib/label-task-results.ts",
+      "output": "label-task-results.mjs",
+      "sourceSha256": "91de6f278612b94c0ef36e7182de4867c7fa458ed2f53c728a30f840a5cb941e",
+      "compiledSha256": "507d29669e61f18efddf20c3dbc134998b6b959b9372e3a771d07155ac423b13"
+    },
+    {
+      "source": "app/globals.css",
+      "output": "theme.css",
+      "sourceSha256": "bc399ac83d39a59a3428ec4dc86f153c9745f9ca416e34646f50ef3c35a28f7a",
+      "compiledSha256": "e1cc374d6cc16f9132374febfeb998d323b496eef5d070bdf51884190bf536cf",
+      "scope": "root theme and font tokens only, not commercial application styles"
+    }
+  ],
+  "dependencies": [],
+  "excluded": [
+    "commercial application and UI source",
+    "payment logic",
+    "AI prompts",
+    "credentials",
+    "real labels",
+    "identity data",
+    "private project reports"
+  ],
+  "license": "MIT"
+}

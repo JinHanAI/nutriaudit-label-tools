@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "gate": {
+    "mode": "formal",
+    "status": "passed",
+    "generated_at": "2026-10-01T16:25:58.661964+00:00",
+    "valid_until": "2026-10-08T16:25:58.661964+00:00"
+  },
+  "project": {
+    "name": "NutriAuditLabelTools（保健品标签工具包）",
+    "slug": "nutriaudit-label-tools",
+    "problem": "Offline supplement-label arithmetic, name overlap, comparison and inventory with explicit unknowns and optional core-audit navigation",
+    "target_users": [
+      "People comparing a planned supplement addition",
+      "People organizing current product labels",
+      "Developers evaluating or embedding offline label functions"
+    ],
+    "why_now": "User explicitly requested isolated open-source release after eight-tool acceptance; incrementally reuse existing modules and observe referral evidence",
+    "scope": "new_repository",
+    "implementation_owner": "codex_root"
+  },
+  "survey": {
+    "skill": "survey",
+    "survey_run_id": "label-tools-survey-20261001",
+    "completed_at": "2026-10-01T16:25:58.661964+00:00",
+    "github_search_snapshot_path": "github-search-final.snapshot.json",
+    "github_search_snapshot_sha256": "978cecfb09f5186cb183251d927f309123b672cde69238561ad33bf07825bb71",
+    "queries": [
+      {
+        "provider": "github",
+        "query": "supplement comparator offline in:readme",
+        "result_url": "https://github.com/search?q=supplement+comparator+offline+in%3Areadme&type=repositories",
+        "searched_at": "2026-10-01T16:25:17.167677+00:00"
+      },
+      {
+        "provider": "github",
+        "query": "supplement tracker offline in:readme",
+        "result_url": "https://github.com/search?q=supplement+tracker+offline+in%3Areadme&type=repositories",
+        "searched_at": "2026-10-01T16:25:17.167677+00:00"
+      },
+      {
+        "provider": "github",
+        "query": "supplement inventory language:JavaScript",
+        "result_url": "https://github.com/search?q=supplement+inventory+language%3AJavaScript&type=repositories",
+        "searched_at": "2026-10-01T16:25:17.167677+00:00"
+      }
+    ],
+    "no_candidates_found": false,
+    "no_candidates_reason": "",
+    "candidates": [
+      {
+        "name": "mathjs",
+        "url": "https://github.com/josdejong/mathjs",
+        "source_commit": "8d214e050a0acb9f132405d55a96b683fa7b6324",
+        "source_commit_url": "https://github.com/josdejong/mathjs/commit/8d214e050a0acb9f132405d55a96b683fa7b6324",
+        "github_snapshot_path": "github-josdejong-mathjs.snapshot.json",
+        "github_snapshot_sha256": "4dbd54aeb9e4b9557a3c973431b163c9926f57e7fa6c8b075a5ae10f74f6195e",
+        "category": "direct",
+        "maintenance": {
+          "status": "active",
+          "evidence": [
+            {
+              "url": "https://github.com/josdejong/mathjs",
+              "observed_at": "2026-10-01T16:15:59.799252+00:00",
+              "claim": "archived=False; default committed_at=2026-08-10T10:43:23Z; pushed_at=2026-09-13T14:21:56Z; these are separate signals"
+            }
+          ]
+        },
+        "adoption": {
+          "status": "unknown",
+          "evidence": [
+            {
+              "url": "https://github.com/josdejong/mathjs",
+              "observed_at": "2026-10-01T16:15:59.799252+00:00",
+              "claim": "Public stars/forks available; verified actual use and production suitability unknown"
+            }
+          ]
+        },
+        "license": {
+          "spdx": "Apache-2.0",
+          "evidence_url": "https://github.com/josdejong/mathjs/blob/develop/LICENSE"
+        },
+        "security": {
+          "status": "unknown",
+          "notes": "No complete dependency, vulnerability or deployment-security audit performed; no candidate code/data copied",
+          "evidence": [
+            {
+              "url": "https://github.com/josdejong/mathjs/security",
+              "observed_at": "2026-10-01T16:15:59.799252+00:00",
+              "claim": "Security adequacy not established by public repository metadata"
+            }
+          ]
+        },
+        "strengths": [
+          {
+            "claim": "Direct mass unit conversion; third-party library",
+            "evidence_urls": [
+              "https://github.com/josdejong/mathjs/blob/develop/docs/datatypes/units.md"
+            ]
+          }
+        ],
+        "gaps": [
+          {
+            "claim": "Whole eight-task label workflow not verified; inference from documented math-library scope",
+            "basis": "inference",
+            "confidence": "medium",
+            "evidence_urls": [
+              "https://github.com/josdejong/mathjs/blob/develop/docs/datatypes/units.md"
+            ]
+          }
+        ],
+        "fit": "reference"
+      },
+      {
+        "name": "wger",
+        "url": "https://github.com/wger-project/wger",
+        "source_commit": "5652a8ad87fa4f154e33720127d335ca06f705a5",
+        "source_commit_url": "https://github.com/wger-project/wger/commit/5652a8ad87fa4f154e33720127d335ca06f705a5",
+        "github_snapshot_path": "github-wger-project-wger.snapshot.json",
+        "github_snapshot_sha256": "46952d664c10cd37483996b855bdfe46cd8e658309b1c71a0bf62dff27e8fd4c",
+        "category": "adjacent",
+        "maintenance": {
+          "status": "active",
+          "evidence": [
+            {
+              "url": "https://github.com/wger-project/wger",
+              "observed_at": "2026-10-01T16:16:00.266930+00:00",
+              "claim": "archived=False; default committed_at=2026-09-29T03:07:37Z; pushed_at=2026-10-01T02:03:43Z; these are separate signals"
+            }
+          ]
+        },
+        "adoption": {
+          "status": "unknown",
+          "evidence": [
+            {
+              "url": "https://github.com/wger-project/wger",
+              "observed_at": "2026-10-01T16:16:00.266930+00:00",
+              "claim": "Public stars/forks available; verified actual use and production suitability unknown"
+            }
+          ]
+        },
+        "license": {
+          "spdx": "AGPL-3.0",
+          "evidence_url": "https://github.com/wger-project/wger/blob/master/LICENSE.txt"
+        },
+        "security": {
+          "status": "unknown",
+          "notes": "No complete dependency, vulnerability or deployment-security audit performed; no candidate code/data copied",
+          "evidence": [
+            {
+              "url": "https://github.com/wger-project/wger/security",
+              "observed_at": "2026-10-01T16:16:00.266930+00:00",
+              "claim": "Security adequacy not established by public repository metadata"
+            }
+          ]
+        },
+        "strengths": [
+          {
+            "claim": "Nutrition plans, records and REST API",
+            "evidence_urls": [
+              "https://github.com/wger-project/wger"
+            ]
+          }
+        ],
+        "gaps": [
+          {
+            "claim": "Self-hosted application differs from a dependency-free embeddable module",
+            "basis": "inference",
+            "confidence": "medium",
+            "evidence_urls": [
+              "https://github.com/wger-project/wger"
+            ]
+          }
+        ],
+        "fit": "reference"
+      },
+      {
+        "name": "nutrition-label",
+        "url": "https://github.com/nutritionix/nutrition-label",
+        "source_commit": "cd1ca81c2412529b376f0a77aa96edd442fcdde8",
+        "source_commit_url": "https://github.com/nutritionix/nutrition-label/commit/cd1ca81c2412529b376f0a77aa96edd442fcdde8",
+        "github_snapshot_path": "github-nutritionix-nutrition-label.snapshot.json",
+        "github_snapshot_sha256": "3644732ee72013a2d956c68eef303cad6e68b5ceb22846f85ac0d51d96885bf4",
+        "category": "adjacent",
+        "maintenance": {
+          "status": "inactive",
+          "evidence": [
+            {
+              "url": "https://github.com/nutritionix/nutrition-label",
+              "observed_at": "2026-10-01T16:15:59.008864+00:00",
+              "claim": "archived=False; default committed_at=2023-10-21T01:06:03Z; pushed_at=2024-06-03T18:46:07Z; these are separate signals"
+            }
+          ]
+        },
+        "adoption": {
+          "status": "unknown",
+          "evidence": [
+            {
+              "url": "https://github.com/nutritionix/nutrition-label",
+              "observed_at": "2026-10-01T16:15:59.008864+00:00",
+              "claim": "Public stars/forks available; verified actual use and production suitability unknown"
+            }
+          ]
+        },
+        "license": {
+          "spdx": "MIT",
+          "evidence_url": "https://github.com/nutritionix/nutrition-label/blob/master/LICENSE"
+        },
+        "security": {
+          "status": "unknown",
+          "notes": "No complete dependency, vulnerability or deployment-security audit performed; no candidate code/data copied",
+          "evidence": [
+            {
+              "url": "https://github.com/nutritionix/nutrition-label/security",
+              "observed_at": "2026-10-01T16:15:59.008864+00:00",
+              "claim": "Security adequacy not established by public repository metadata"
+            }
+          ]
+        },
+        "strengths": [
+          {
+            "claim": "Render nutrition labels from supplied data",
+            "evidence_urls": [
+              "https://github.com/nutritionix/nutrition-label/blob/master/README.md"
+            ]
+          }
+        ],
+        "gaps": [
+          {
+            "claim": "jQuery dependency and display workflow differ from arithmetic/compare functions",
+            "basis": "inference",
+            "confidence": "medium",
+            "evidence_urls": [
+              "https://github.com/nutritionix/nutrition-label/blob/master/README.md"
+            ]
+          }
+        ],
+        "fit": "reference"
+      },
+      {
+        "name": "SupplementTracker",
+        "url": "https://github.com/hunterthompson025/SupplementTracker",
+        "source_commit": "e87197869833669e91285eb77a7bd49b961bcd79",
+        "source_commit_url": "https://github.com/hunterthompson025/SupplementTracker/commit/e87197869833669e91285eb77a7bd49b961bcd79",
+        "github_snapshot_path": "github-hunterthompson025-SupplementTracker.snapshot.json",
+        "github_snapshot_sha256": "bfbdc6d7482c2eabbf6800f56a813e3cfda5d8fac8ce5d917f1450f6b4849f71",
+        "category": "direct",
+        "maintenance": {
+          "status": "active",
+          "evidence": [
+            {
+              "url": "https://github.com/hunterthompson025/SupplementTracker",
+              "observed_at": "2026-10-01T16:17:29.172998+00:00",
+              "claim": "archived=False; default committed_at=2026-08-07T21:34:33Z; pushed_at=2026-08-07T21:34:33Z; these are separate signals"
+            }
+          ]
+        },
+        "adoption": {
+          "status": "unknown",
+          "evidence": [
+            {
+              "url": "https://github.com/hunterthompson025/SupplementTracker",
+              "observed_at": "2026-10-01T16:17:29.172998+00:00",
+              "claim": "Public stars/forks available; verified actual use and production suitability unknown"
+            }
+          ]
+        },
+        "license": {
+          "spdx": "MIT",
+          "evidence_url": "https://github.com/hunterthompson025/SupplementTracker/blob/main/LICENSE"
+        },
+        "security": {
+          "status": "unknown",
+          "notes": "No complete dependency, vulnerability or deployment-security audit performed; no candidate code/data copied",
+          "evidence": [
+            {
+              "url": "https://github.com/hunterthompson025/SupplementTracker/security",
+              "observed_at": "2026-10-01T16:17:29.172998+00:00",
+              "claim": "Security adequacy not established by public repository metadata"
+            }
+          ]
+        },
+        "strengths": [
+          {
+            "claim": "Household inventory, depletion and reordering",
+            "evidence_urls": [
+              "https://github.com/hunterthompson025/SupplementTracker"
+            ]
+          }
+        ],
+        "gaps": [
+          {
+            "claim": "Documented Firebase authentication/database differ from no-account offline constraints",
+            "basis": "inference",
+            "confidence": "medium",
+            "evidence_urls": [
+              "https://github.com/hunterthompson025/SupplementTracker"
+            ]
+          }
+        ],
+        "fit": "reference"
+      },
+      {
+        "name": "PJT_kleerer.io",
+        "url": "https://github.com/McJack3d/PJT_kleerer.io",
+        "source_commit": "fcfaffc95658c90e4563e0b36c148b44f50cad7c",
+        "source_commit_url": "https://github.com/McJack3d/PJT_kleerer.io/commit/fcfaffc95658c90e4563e0b36c148b44f50cad7c",
+        "github_snapshot_path": "github-McJack3d-PJT_kleerer.io.snapshot.json",
+        "github_snapshot_sha256": "b303abc36e16a226f97c90795132eab2f269f3d3fc871db91bbef096fd1a9b9b",
+        "category": "direct",
+        "maintenance": {
+          "status": "active",
+          "evidence": [
+            {
+              "url": "https://github.com/McJack3d/PJT_kleerer.io",
+              "observed_at": "2026-10-01T16:23:11.618127+00:00",
+              "claim": "archived false; commit 2026-09-18T16:57:10Z; README is a maintainer claim, not runtime validation"
+            }
+          ]
+        },
+        "adoption": {
+          "status": "unknown",
+          "evidence": [
+            {
+              "url": "https://github.com/McJack3d/PJT_kleerer.io",
+              "observed_at": "2026-10-01T16:23:11.618127+00:00",
+              "claim": "Actual sustained use not verified; stars/forks not used as adoption proof"
+            }
+          ]
+        },
+        "license": {
+          "spdx": "AGPL-3.0",
+          "evidence_url": "https://github.com/McJack3d/PJT_kleerer.io/blob/main/NOTICE.md"
+        },
+        "security": {
+          "status": "unknown",
+          "notes": "No independent vulnerability or deployment audit; no copied code or data",
+          "evidence": [
+            {
+              "url": "https://github.com/McJack3d/PJT_kleerer.io",
+              "observed_at": "2026-10-01T16:23:11.618127+00:00",
+              "claim": "README security statements not independently tested"
+            }
+          ]
+        },
+        "strengths": [
+          {
+            "claim": "Static dependency-free offline catalogue, product comparisons and stack sums",
+            "evidence_urls": [
+              "https://github.com/McJack3d/PJT_kleerer.io"
+            ]
+          }
+        ],
+        "gaps": [
+          {
+            "claim": "Clinical scoring/catalogue/pipeline and layered AGPL/restricted-data license differ from MIT manual-input arithmetic module; API extractability not tested",
+            "basis": "inference",
+            "confidence": "medium",
+            "evidence_urls": [
+              "https://github.com/McJack3d/PJT_kleerer.io"
+            ]
+          }
+        ],
+        "fit": "reference"
+      },
+      {
+        "name": "stack",
+        "url": "https://github.com/ilodezis/stack",
+        "source_commit": "583b40c9a767ed5de800d1ec726359b4783f1dc5",
+        "source_commit_url": "https://github.com/ilodezis/stack/commit/583b40c9a767ed5de800d1ec726359b4783f1dc5",
+        "github_snapshot_path": "github-ilodezis-stack.snapshot.json",
+        "github_snapshot_sha256": "190ecacaf28502d51b01db820560ef89eb325f4c57f8c374ab27f3e716fed9e5",
+        "category": "direct",
+        "maintenance": {
+          "status": "active",
+          "evidence": [
+            {
+              "url": "https://github.com/ilodezis/stack",
+              "observed_at": "2026-10-01T16:23:11.358175+00:00",
+              "claim": "archived false; commit 2026-06-17T18:42:03Z; README is a maintainer claim, not runtime validation"
+            }
+          ]
+        },
+        "adoption": {
+          "status": "unknown",
+          "evidence": [
+            {
+              "url": "https://github.com/ilodezis/stack",
+              "observed_at": "2026-10-01T16:23:11.358175+00:00",
+              "claim": "Actual sustained use not verified; stars/forks not used as adoption proof"
+            }
+          ]
+        },
+        "license": {
+          "spdx": "UNKNOWN",
+          "evidence_url": "https://github.com/ilodezis/stack/blob/main/README.md"
+        },
+        "security": {
+          "status": "unknown",
+          "notes": "No independent vulnerability or deployment audit; no copied code or data",
+          "evidence": [
+            {
+              "url": "https://github.com/ilodezis/stack",
+              "observed_at": "2026-10-01T16:23:11.358175+00:00",
+              "claim": "README security statements not independently tested"
+            }
+          ]
+        },
+        "strengths": [
+          {
+            "claim": "Offline no-account PWA with local storage, stock and export",
+            "evidence_urls": [
+              "https://github.com/ilodezis/stack"
+            ]
+          }
+        ],
+        "gaps": [
+          {
+            "claim": "Persistent tracking differs from transient label arithmetic functions; reusable license not confirmed",
+            "basis": "inference",
+            "confidence": "medium",
+            "evidence_urls": [
+              "https://github.com/ilodezis/stack"
+            ]
+          }
+        ],
+        "fit": "reference"
+      }
+    ]
+  },
+  "decision": {
+    "outcome": "build",
+    "rationale": [
+      "Reuse existing narrow shared arithmetic rather than start a new full application",
+      "Public source/offline embedding and consistent unknown handling are explicit scope; actual demand remains unknown"
+    ],
+    "why_existing_not_sufficient": [
+      "Spreadsheet plus NIH records is sufficient for individual arithmetic but does not deliver a reusable browser module with this input contract",
+      "mathjs supplies unit foundations but integration still needs label semantics and adds dependencies",
+      "wger and SupplementTracker add application/server or account/sync scope",
+      "nutrition-label is a jQuery presentation plugin; overall workflow not established",
+      "kleerer overlaps comparison and stack sums; catalogue/scoring and layered licenses differ; abstractability unknown rather than ruled out",
+      "stack is a valid no-account offline tracker; UNKNOWN reuse license and persistent routine workflow differ from current transient functions"
+    ],
+    "minimum_differentiation": [
+      "Explicit unknown propagation and serving-vs-unit validation",
+      "Dependency-free local functions, eight examples and browser demo",
+      "Sourced four-group lookup, restricted mass conversions, local export and optional no-health-payload referral"
+    ],
+    "upstream_sources": [],
+    "next_step": "After independent pass and formal validator, use shared creator for isolated MIT public package; audit files and publish authorized GitHub repository"
+  },
+  "independent_review": {
+    "review_run_id": "label-tools-independent-20261002-r3",
+    "reviewer": "independent_qa",
+    "reviewer_role": "independent_reviewer",
+    "reviewed_at": "2026-10-01T16:29:39.167616+00:00",
+    "reviewed_report_sha256": "3ca311650c73640b10329713dbf4b7605d412241bbae52dbf4ffa2f8eb3fc46e",
+    "verdict": "pass",
+    "checks": [
+      {
+        "id": "coverage",
+        "result": "pass",
+        "evidence": "Six candidates now cover unit arithmetic, hosted inventory, label rendering, offline catalogue comparison/stack sums and no-account persistent tracking. New strong candidates were found by an independent wider web search; the three-query official final bundle is genuine but broad and star-ranked, not exhaustive."
+      },
+      {
+        "id": "maintenance",
+        "result": "pass",
+        "evidence": "Independent anonymous public API reread confirmed all six archived/default-branch commit/license values against hash-bound snapshots. Push, default commit and release remain separate signals; maintenance is not inferred from star updated_at. Canonical snapshot age classifications now match: nutrition-label inactive, SupplementTracker and stack active; final report distinguishes these machine labels from unverified ongoing support and quality."
+      },
+      {
+        "id": "adoption",
+        "result": "pass",
+        "evidence": "All six actual adoption findings remain unknown. Historical 2022 individual spreadsheet anecdotes show a workflow exists, not 2026 prevalence, developer demand, conversion or growth. Publication is an experiment, not observed adoption."
+      },
+      {
+        "id": "license_security",
+        "result": "pass",
+        "evidence": "wger LICENSE.txt corrected and verified; kleerer NOTICE directly confirms layered AGPL/restricted methodology/data terms. stack API license is UNKNOWN despite README MIT statement, so reuse permission remains unresolved. No upstream code/data is copied; all six security findings stay unknown."
+      },
+      {
+        "id": "confirmation_bias",
+        "result": "pass",
+        "evidence": "The final report accepts spreadsheet+NIH and commercial-site-only as sufficient personal-use alternatives. kleerer materially overlaps offline comparison/totals, stack fits persistent tracking; build is limited to authorized publication of existing independently authored transient manual-input functions and a consistent embedding contract, not proven superiority, novelty or market need."
+      },
+      {
+        "id": "evidence_integrity",
+        "result": "pass",
+        "evidence": "Official collector and transport adapter hashes match receipts; adapter only replaces urlopen and preserves parsing/time/field/error/write behavior. Four original candidate snapshots plus two added candidates were independently API-checked; original inventory search nine names and final comparator search first ten names/count174 reread match. Final report SHA verified and this review binds it."
+      }
+    ],
+    "challenges": [
+      {
+        "challenge": "A spreadsheet with NIH records already solves personal inventory and arithmetic; does publishing another repository mainly reflect sunk cost?",
+        "resolution": "Report explicitly accepts that alternative and limits this decision to user-authorized source publication and browser embedding of narrow own functions already verified locally. Developer demand and acquisition value remain unknown; no full application, persistent tracker or eight duplicate repositories is justified. Lack of useful reuse/referrals should reduce maintenance rather than expand scope.",
+        "evidence_urls": [
+          "https://support.microsoft.com/en-us/excel/functions/convert-function",
+          "https://ods.od.nih.gov/HealthInformation/healthinformation.aspx"
+        ]
+      },
+      {
+        "challenge": "The original shortlist missed offline no-account competitors and could have selected account/server constraints to favor build.",
+        "resolution": "kleerer and stack now have canonical official API snapshots and material coverage is admitted. kleerer overlaps comparison/stack sums; extraction feasibility is not tested and not ruled out. stack provides persistent stock/export. Narrow transient label functions are the current chosen contract, not a claim these projects are deficient or inferior.",
+        "evidence_urls": [
+          "https://github.com/McJack3d/PJT_kleerer.io",
+          "https://github.com/ilodezis/stack"
+        ]
+      },
+      {
+        "challenge": "Can competitor licenses and security claims support MIT reuse or a safety finding?",
+        "resolution": "No upstream implementation/data is copied. kleerer layered NOTICE is acknowledged, stack README/API license ambiguity is unresolved, mathjs mixed components and wger data/documentation rights are distinguished. All security and actual adoption remain unknown; this admission pass is not a medical or security certification.",
+        "evidence_urls": [
+          "https://github.com/McJack3d/PJT_kleerer.io/blob/main/NOTICE.md",
+          "https://github.com/ilodezis/stack/blob/main/README.md",
+          "https://github.com/wger-project/wger/blob/master/LICENSE.txt"
+        ]
+      },
+      {
+        "challenge": "Could a curl adapter or hand-written links fabricate official collector evidence?",
+        "resolution": "Unchanged canonical collectors run under runpy; transport accepts only public API GETs and returns HTTP entity bytes, preserving HTTPError semantics including release404. Script/adapter hashes and all six candidate API key fields matched; a final search first10/count174 matched independently. URL query and report hashes are bound by the canonical validator.",
+        "evidence_urls": [
+          "https://api.github.com/repos/McJack3d/PJT_kleerer.io",
+          "https://api.github.com/repos/ilodezis/stack",
+          "https://api.github.com/search/repositories?q=supplement+comparator+offline+in%3Areadme&sort=stars&order=desc&per_page=10"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "report_path": "pre-project-survey.md",
+    "report_sha256": "3ca311650c73640b10329713dbf4b7605d412241bbae52dbf4ffa2f8eb3fc46e"
+  }
+}
