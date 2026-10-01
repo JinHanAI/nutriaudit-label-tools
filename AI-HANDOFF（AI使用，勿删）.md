@@ -11,4 +11,5 @@
 - 证据：8边界测试与8示例、35文件脱敏0命中、3派生hash及正式bundle/history验证通过；独立手机/Pad横竖屏模拟QA通过，未做真实设备验收。
 - GitHub：https://github.com/JinHanAI/nutriaudit-label-tools 已公开，MIT；初始提交 b3fc085 保留封存准入包，两个CI成功，匿名访问HTTP200。
 - 主站：https://www.nutriaudit.com/tools/supplement-label-tools 已部署，正式域HTTP200、英文默认与中文noindex回读通过，README八任务在线链接已补。固定核心审计引导仍为 /scan。
-- 待办：主站独立线上交互验收与Google/Bing精确提交由主站任务继续。真实引荐访问、收录与转化尚未知；不要因公开/部署推断增长。
+- 主站独立线上合成浏览器验收通过：八任务手机/Pad横竖屏与核心承接、长内容/导出失败恢复及metadata；业务API与遥测拦截，不代表真实设备或真实后端验收。
+- Google sitemap已受理待处理，Bing仅提交该正式canonical并受理；Google检查尚未收录。真实引荐访问和转化未知，不因公开/部署/提交推断增长。
