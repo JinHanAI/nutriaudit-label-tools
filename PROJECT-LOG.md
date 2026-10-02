@@ -1,3 +1,7 @@
+# 2026-10-02 — Focused project directory
+
+Added links to three independently runnable task repositories and README-position UTM tags. Public package source and algorithm hashes remain unchanged. Linked repositories are public with exact-SHA CI success; no indexing, AI citations or traffic growth claimed.
+
 # 项目日志
 
 ## 2026-10-02 — GitHub 文档与搜索入口增强

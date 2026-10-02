@@ -2,7 +2,7 @@
 
 Compare supplement labels, find duplicate ingredient names, calculate daily label amounts, convert mg and mcg, and export a printable supplement list. Eight open-source JavaScript tools run locally with zero dependencies.
 
-**[Use the supplement label tools online](https://www.nutriaudit.com/tools/supplement-label-tools?utm_source=github&utm_medium=referral&utm_campaign=label_tools)** — no download is needed. Prefer offline use? Follow the [quick start](#quick-start). Building your own tool? [Import the functions](#import-a-function).
+**[Use the supplement label tools online](https://www.nutriaudit.com/tools/supplement-label-tools?utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme)** — no download is needed. Prefer offline use? Follow the [quick start](#quick-start). Building your own tool? [Import the functions](#import-a-function).
 
 **These tools do arithmetic and label organization. They do not determine whether a supplement combination is safe, recommend doses, diagnose conditions, or check drug interactions.**
 
@@ -14,18 +14,28 @@ Compare supplement labels, find duplicate ingredient names, calculate daily labe
 
 Read the [worked examples for all eight tools](docs/supplement-label-calculations.md). They show the inputs, expected results and limits using synthetic labels.
 
+## Focused tools you can run independently
+
+Each focused project has its own local demo, worked example and question-based guide. They reuse this toolkit’s MIT core.
+
+- [Supplement label overlap & daily totals](https://github.com/JinHanAI/nutriaudit-label-overlap): repeated label names and known daily amounts.
+- [Two supplement label comparison](https://github.com/JinHanAI/nutriaudit-label-compare): shared and one-sided ingredients, with arithmetic differences.
+- [Supplement list export](https://github.com/JinHanAI/nutriaudit-list-export): local spreadsheet-safe CSV and printing for an appointment.
+
+Their main-site links identify the referring project without transferring label input. These are focused distribution experiments; separate repositories do not guarantee search ranking or AI citations.
+
 ## Eight supplement label tools
 
 | Task | What you get | Module function |
 |---|---|---|
-| [Duplicate supplement ingredients](https://www.nutriaudit.com/tools/supplement-label-tools?task=duplicate&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Names shared across entered products | `findProductOverlaps` |
-| [Daily supplement amount calculator](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-total&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Sum known amounts using your actual daily units | `summarizeLabels` |
-| [Supplement label comparison](https://www.nutriaudit.com/tools/supplement-label-tools?task=compare&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Shared names and comparable daily quantities | `compareLabels` |
-| [Serving size calculator](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-dose&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Amount per serving × daily units ÷ units per serving | `calculateDailyAmount` |
-| [mg to mcg converter](https://www.nutriaudit.com/tools/supplement-label-tools?task=units&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Convert the same substance between g, mg and mcg | `convertMass` |
-| [Sourced name lookup](https://www.nutriaudit.com/tools/supplement-label-tools?task=aliases&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Four explicit groups: calcium, vitamin C, vitamin D2, vitamin D3 | `lookupLabelName` |
-| [Printable supplement list and CSV](https://www.nutriaudit.com/tools/supplement-label-tools?task=inventory&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Local CSV and printable list | `exportInventoryCsv` |
-| [Supplement cost per day calculator](https://www.nutriaudit.com/tools/supplement-label-tools?task=cost&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Estimated days and daily cost for your entered plan | `calculateBottleCost` |
+| [Duplicate supplement ingredients](https://www.nutriaudit.com/tools/supplement-label-tools?task=duplicate&utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme) | Names shared across entered products | `findProductOverlaps` |
+| [Daily supplement amount calculator](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-total&utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme) | Sum known amounts using your actual daily units | `summarizeLabels` |
+| [Supplement label comparison](https://www.nutriaudit.com/tools/supplement-label-tools?task=compare&utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme) | Shared names and comparable daily quantities | `compareLabels` |
+| [Serving size calculator](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-dose&utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme) | Amount per serving × daily units ÷ units per serving | `calculateDailyAmount` |
+| [mg to mcg converter](https://www.nutriaudit.com/tools/supplement-label-tools?task=units&utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme) | Convert the same substance between g, mg and mcg | `convertMass` |
+| [Sourced name lookup](https://www.nutriaudit.com/tools/supplement-label-tools?task=aliases&utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme) | Four explicit groups: calcium, vitamin C, vitamin D2, vitamin D3 | `lookupLabelName` |
+| [Printable supplement list and CSV](https://www.nutriaudit.com/tools/supplement-label-tools?task=inventory&utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme) | Local CSV and printable list | `exportInventoryCsv` |
+| [Supplement cost per day calculator](https://www.nutriaudit.com/tools/supplement-label-tools?task=cost&utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme) | Estimated days and daily cost for your entered plan | `calculateBottleCost` |
 
 No package installation, API key, account, database, or external asset is required. Original label names remain visible; an unknown amount is not converted into zero. Name overlap is not a clinical interaction or a safety conclusion.
 
@@ -87,7 +97,7 @@ Enter each label's amount per serving, units per serving and actual daily units.
 
 ### How many mcg are in 1 mg?
 
-1 mg equals 1,000 mcg. The converter also accepts μg and µg for micrograms. It converts mass units for the same substance; it does not convert IU, %DV or mL into mass. [Try the unit converter](https://www.nutriaudit.com/tools/supplement-label-tools?task=units&utm_source=github&utm_medium=referral&utm_campaign=label_tools).
+1 mg equals 1,000 mcg. The converter also accepts μg and µg for micrograms. It converts mass units for the same substance; it does not convert IU, %DV or mL into mass. [Try the unit converter](https://www.nutriaudit.com/tools/supplement-label-tools?task=units&utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme).
 
 ### Can I export a vitamin and supplement list to a spreadsheet?
 
@@ -103,7 +113,7 @@ A missing amount, unsupported unit or unverified ingredient name prevents a reli
 
 ## Continue with your full supplement list
 
-After the small task, each result offers a relevant next step: review your whole list in [NutriAudit's core supplement audit](https://www.nutriaudit.com/scan?utm_source=github&utm_medium=referral&utm_campaign=label_tools). The website offers a free preview; a full report follows its displayed pricing.
+After the small task, each result offers a relevant next step: review your whole list in [NutriAudit's core supplement audit](https://www.nutriaudit.com/scan?utm_source=github&utm_medium=referral&utm_campaign=label_tools&utm_content=readme). The website offers a free preview; a full report follows its displayed pricing.
 
 The standalone demo does **not** transfer entered labels to the website. Its links contain fixed campaign and task attribution only. Add or upload your actual labels on NutriAudit. Examples are never treated as personal labels.
 
