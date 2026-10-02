@@ -1,23 +1,31 @@
-# NutriAudit Supplement Label Tools
+# NutriAudit Supplement Label Calculator & Ingredient Comparison
 
-Eight small, dependency-free JavaScript tools for reading and organizing supplement labels. Use them offline, import the functions into your own project, or run the static browser demo.
+Compare supplement labels, find duplicate ingredient names, calculate daily label amounts, convert mg and mcg, and export a printable supplement list. Eight open-source JavaScript tools run locally with zero dependencies.
 
-Try the [hosted tools on NutriAudit](https://www.nutriaudit.com/tools/supplement-label-tools?utm_source=github&utm_medium=referral&utm_campaign=label_tools) without downloading the toolkit.
+**[Use the supplement label tools online](https://www.nutriaudit.com/tools/supplement-label-tools?utm_source=github&utm_medium=referral&utm_campaign=label_tools)** — no download is needed. Prefer offline use? Follow the [quick start](#quick-start). Building your own tool? [Import the functions](#import-a-function).
 
 **These tools do arithmetic and label organization. They do not determine whether a supplement combination is safe, recommend doses, diagnose conditions, or check drug interactions.**
 
-## Eight tasks
+## What can I do with my supplement labels?
+
+- **A multivitamin and a separate calcium product:** find repeated ingredient names and total the known daily label amounts.
+- **Two products you are considering:** compare their entered labels on the same daily-unit basis.
+- **A collection you want to organize:** make a supplement list for your records, export CSV, or print it for a conversation with a clinician.
+
+Read the [worked examples for all eight tools](docs/supplement-label-calculations.md). They show the inputs, expected results and limits using synthetic labels.
+
+## Eight supplement label tools
 
 | Task | What you get | Module function |
 |---|---|---|
-| [Duplicate ingredient names](https://www.nutriaudit.com/tools/supplement-label-tools?task=duplicate&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Names shared across entered products | `findProductOverlaps` |
-| [Daily label totals](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-total&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Sum known amounts using your actual daily units | `summarizeLabels` |
-| [Compare two labels](https://www.nutriaudit.com/tools/supplement-label-tools?task=compare&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Shared names and comparable daily quantities | `compareLabels` |
-| [Per-serving arithmetic](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-dose&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Amount per serving × daily units ÷ units per serving | `calculateDailyAmount` |
-| [Mass units](https://www.nutriaudit.com/tools/supplement-label-tools?task=units&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Convert the same substance between g, mg and mcg | `convertMass` |
+| [Duplicate supplement ingredients](https://www.nutriaudit.com/tools/supplement-label-tools?task=duplicate&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Names shared across entered products | `findProductOverlaps` |
+| [Daily supplement amount calculator](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-total&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Sum known amounts using your actual daily units | `summarizeLabels` |
+| [Supplement label comparison](https://www.nutriaudit.com/tools/supplement-label-tools?task=compare&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Shared names and comparable daily quantities | `compareLabels` |
+| [Serving size calculator](https://www.nutriaudit.com/tools/supplement-label-tools?task=daily-dose&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Amount per serving × daily units ÷ units per serving | `calculateDailyAmount` |
+| [mg to mcg converter](https://www.nutriaudit.com/tools/supplement-label-tools?task=units&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Convert the same substance between g, mg and mcg | `convertMass` |
 | [Sourced name lookup](https://www.nutriaudit.com/tools/supplement-label-tools?task=aliases&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Four explicit groups: calcium, vitamin C, vitamin D2, vitamin D3 | `lookupLabelName` |
-| [Label inventory](https://www.nutriaudit.com/tools/supplement-label-tools?task=inventory&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Local CSV and printable list | `exportInventoryCsv` |
-| [Bottle use and cost](https://www.nutriaudit.com/tools/supplement-label-tools?task=cost&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Estimated days and daily cost for your entered plan | `calculateBottleCost` |
+| [Printable supplement list and CSV](https://www.nutriaudit.com/tools/supplement-label-tools?task=inventory&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Local CSV and printable list | `exportInventoryCsv` |
+| [Supplement cost per day calculator](https://www.nutriaudit.com/tools/supplement-label-tools?task=cost&utm_source=github&utm_medium=referral&utm_campaign=label_tools) | Estimated days and daily cost for your entered plan | `calculateBottleCost` |
 
 No package installation, API key, account, database, or external asset is required. Original label names remain visible; an unknown amount is not converted into zero. Name overlap is not a clinical interaction or a safety conclusion.
 
@@ -66,6 +74,32 @@ These numbers are synthetic demonstrations, not suggested intake. Use the same c
 ## Sources and coverage
 
 The small name lookup covers four explicitly listed groups, not a comprehensive supplement database. Sources: [NIH calcium](https://ods.od.nih.gov/factsheets/Calcium-Consumer/), [NIH vitamin C](https://ods.od.nih.gov/factsheets/VitaminC-Consumer/), [NIH vitamin D](https://ods.od.nih.gov/factsheets/VitaminD-Consumer/). A grouped label name does not establish chemical or clinical equivalence.
+
+## Frequently asked questions
+
+### How do I add calcium from a multivitamin and another supplement?
+
+Calculate each product's amount using the units you actually take per day, convert compatible mass units, then add the amounts for the same supported label name. For example, synthetic daily amounts of 200 mg and 0.5 g of calcium total 700 mg. That is label arithmetic, not an assessment of your total dietary intake or whether the amount is appropriate. [See the daily-total example](docs/supplement-label-calculations.md#daily-supplement-amount-calculator).
+
+### How do I compare two supplement labels with different serving sizes?
+
+Enter each label's amount per serving, units per serving and actual daily units. The comparison uses the calculated daily amounts, rather than assuming that one capsule equals one serving. A larger number does not establish a better product. [See the comparison example](docs/supplement-label-calculations.md#supplement-label-comparison).
+
+### How many mcg are in 1 mg?
+
+1 mg equals 1,000 mcg. The converter also accepts μg and µg for micrograms. It converts mass units for the same substance; it does not convert IU, %DV or mL into mass. [Try the unit converter](https://www.nutriaudit.com/tools/supplement-label-tools?task=units&utm_source=github&utm_medium=referral&utm_campaign=label_tools).
+
+### Can I export a vitamin and supplement list to a spreadsheet?
+
+Yes. The inventory tool exports the entered product names, serving sizes, ingredients, amounts, units and notes as local CSV. The browser demo also supports printing. CSV preserves the label entries rather than inventing missing values. [See the inventory example](docs/supplement-label-calculations.md#printable-supplement-list-and-csv-export).
+
+### Does a duplicate ingredient mean the combination is unsafe?
+
+No. A repeated label name is a prompt to review your list, not a safety conclusion. This toolkit does not assess medical history, drug interactions, upper intake limits or your diet. [Continue with your full supplement list](#continue-with-your-full-supplement-list) if you want to move beyond the small label task.
+
+### Why is a total missing instead of zero?
+
+A missing amount, unsupported unit or unverified ingredient name prevents a reliable total. The result stays unknown and explains the limitation. Name lookup covers calcium, vitamin C, vitamin D2 and vitamin D3 only; other names may be shown as literal overlaps without a total.
 
 ## Continue with your full supplement list
 
